@@ -1,5 +1,26 @@
+import { useState } from "react";
+import { Navbar } from "./components";
+
 const App = () => {
-  return <div>Hello World</div>;
+  const [sections, setSections] = useState([
+    "Hero",
+    "Parallax",
+    "Services",
+    "PortFolio1",
+    "PortFolio2",
+    "PortFolio3",
+  ]);
+  const sectionClassName = `h-screen snap-center`;
+  return (
+    <div>
+      <section id="Home" className={sectionClassName}>
+        <Navbar />
+      </section>
+      <section id="Services" className={sectionClassName}>
+        Services
+      </section>
+    </div>
+  );
 };
 
 export default App;
