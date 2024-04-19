@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navbar } from "./components";
+import { Navbar, Hero } from "./components";
 
 const App = () => {
   const [sections, setSections] = useState([
@@ -15,6 +15,7 @@ const App = () => {
     <div>
       <section id="Home" className={sectionClassName}>
         <Navbar />
+        <Hero />
       </section>
       <section id="Services" className={sectionClassName}>
         Services

@@ -1,17 +1,50 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const Links = () => {
+const Links = ({ setOpen }) => {
   const className = `absolute w-full h-full flex flex-col items-center justify-center gap-[20px]`;
   const aClassName = `text-xl`;
   const links = ["Home", "Services", "Portfolio", "Contact", "About"];
+  const variants = {
+    open: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+    closed: {
+      transition: {
+        staggerChildren: 0.05,
+        staggerDirection: -1,
+      },
+    },
+  };
+
+  const linkVariants = {
+    open: {
+      y: 0,
+      opacity: 1,
+    },
+    closed: {
+      y: 50,
+      opacity: 0,
+    },
+  };
   return (
-    <div className={className}>
+    <motion.div className={className} variants={variants}>
       {links.map((link) => (
-        <a className={aClassName} href={`#${link}`} key={link}>
+        <motion.a
+          className={aClassName}
+          href={`#${link}`}
+          key={link}
+          variants={linkVariants}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setOpen((prev) => !prev)}
+        >
           {link}
-        </a>
+        </motion.a>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
