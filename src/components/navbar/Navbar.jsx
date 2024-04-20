@@ -4,9 +4,9 @@ import "./navbar.css";
 import Sidebar from "../sidebar/Sidebar";
 const Navbar = () => {
   return (
-    <div className="h-[100px]">
+    <div className="h-[100px] flex flex-column">
       <Sidebar />
-      <div className="mx-32 flex items-center justify-between h-full">
+      <div className="mx-32 flex items-center justify-between h-full z-20">
         <motion.span
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}

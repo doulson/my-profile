@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Links = ({ setOpen }) => {
   const className = `absolute w-full h-full flex flex-col items-center justify-center gap-[20px]`;
   const aClassName = `text-xl`;
-  const links = ["Home", "Services", "Portfolio", "Contact", "About"];
+  const links = ["Home", "About", "Experiences", "Projects", "Contact"];
   const variants = {
     open: {
       transition: {

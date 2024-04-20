@@ -16,6 +16,7 @@ const Sidebar = () => {
     closed: {
       clipPath: "circle(30px at 50px 50px)",
       transition: {
+        delay: 0.3,
         type: "spring",
         stiffness: 400,
         damping: 40,
@@ -24,7 +25,7 @@ const Sidebar = () => {
   };
   return (
     <motion.div
-      className="flex flex-col items-center justify-center bg-white text-black"
+      className="flex flex-col items-center justify-center bg-white text-black z-50"
       animate={open ? "open" : "closed"}
     >
       <motion.div

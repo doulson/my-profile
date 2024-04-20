@@ -1,3 +1,13 @@
 .hero {
   height: calc(100vh - 100px);
 }
+
+.text-gradient {
+  background: linear-gradient(
+    90deg,
+    #6ee7b7,
+    #3b82f6
+  ); /* Example gradient from teal to blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
