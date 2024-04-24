@@ -1,14 +1,39 @@
-import React from "react";
-
+import { motion } from "framer-motion";
+import React, { useState } from "react";
 const Projects = () => {
-  return (
-    <div>
-      <p className="h-[50rem]">Projects1</p>
-      <p className="h-[50rem]">Projects2</p>
-      <p className="h-[50rem]">Projects3</p>
-      <p className="h-[50rem]">Projects4</p>
-    </div>
-  );
+  const [activeTab, setActiveTab] = useState(-1);
+
+  const questions = [
+    {
+      title: "Custlr",
+      link: "https://custlr.com/",
+      content:
+        "Declare a new Alpine component and its data for a block of HTML.",
+      techs: [],
+      img: "",
+    },
+    {
+      title: "Tryiton",
+      link: "https://tryiton.co/",
+      content:
+        "Declare a new Alpine component and its data for a block of HTML.",
+      techs: [],
+      img: "",
+    },
+    {
+      title: "What is $store?",
+      content: "Access a global store registered using Alpine.store(...).",
+    },
+    {
+      title: "What is x-on?",
+      content: "Listen for browser events on an element.",
+    },
+  ];
+  const handleClick = (index) => {
+    setActiveTab(activeTab === index ? -1 : index);
+  };
+
+  return <div></div>;
 };
 
 export default Projects;

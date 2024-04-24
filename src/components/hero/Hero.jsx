@@ -147,7 +147,7 @@ const Hero = () => {
             <motion.a
               href="#Projects"
               variants={textVariants}
-              className={btnClassName}
+              className={`${btnClassName} border-bottom-8 `}
             >
               See the Latest Works
             </motion.a>
@@ -168,7 +168,7 @@ const Hero = () => {
           animate="scrollButton"
         />
         <motion.div
-          className="absolute right-0 w-1/3 hidden sm:block"
+          className="absolute right-32 bottom-8 sm:w-1/4  hidden sm:block "
           variants={textVariants2}
           initial="initial"
           animate="animate"

@@ -1,6 +1,9 @@
-import React from "react";
-
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 const Previous = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+  const controller = useAnimation();
   const exps = [
     {
       year: "2021 March - 2024 April",
@@ -19,24 +22,67 @@ const Previous = () => {
         "Assist in the development and maintenance of web applications while gaining hands-on experience in coding, debugging, and testing.",
     },
   ];
+
+  const containerVariants = {
+    hidden: {
+      clipPath: "circle(0% at bottom center)",
+      opacity: 0,
+    },
+    show: {
+      clipPath: "circle(2400px at top center)",
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1, // 0.1 second delay between each child animation
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      controller.start("show");
+    }
+  }, [inView]);
   return (
-    <div>
-      <h2 className="text-2xl text-bold mb-5">Work Experience</h2>
+    <motion.div
+      ref={ref}
+      variants={containerVariants}
+      initial="hidden"
+      animate={controller}
+    >
+      <motion.h2 className="text-2xl text-bold mb-5" variants={childVariants}>
+        Work Experience
+      </motion.h2>
       {exps.map((x) => (
-        <div key={x.company} className="flex gap-10">
-          <div className="w-1/3 text-gray-400">{x.year}</div>
-          <div className="w-2/3">
-            <div className="flex">
+        <motion.div
+          key={x.company}
+          className="flex gap-10 p-4 rounded-xl hover:bg-white/5 hover:border-2 hover:p-5"
+          variants={childVariants}
+          whileHover={{ scale: 1.04 }}
+        >
+          <motion.div
+            className="hidden sm:block sm:w-1/3 text-gray-400"
+            variants={childVariants}
+          >
+            {x.year}
+          </motion.div>
+          <motion.div className="w-full sm:w-2/3" variants={childVariants}>
+            <motion.div className="flex" variants={childVariants}>
               <motion.a
                 href={x.website}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex gap-3"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.1, fontWeight: "bold" }}
                 whileTap={{ scale: 0.95 }}
+                variants={childVariants}
               >
-                <span>{x.position}</span>
-                <span>-</span>
+                <motion.span variants={childVariants}>{x.position}</motion.span>
+                <motion.span variants={childVariants}>-</motion.span>
                 {x.company}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -53,12 +99,20 @@ const Previous = () => {
                   />
                 </svg>
               </motion.a>
-            </div>
-            <p className="text-gray-500 my-3">{x.description}</p>
-          </div>
-        </div>
+            </motion.div>
+            <motion.div
+              className="block sm:hidden text-gray-400"
+              variants={childVariants}
+            >
+              {x.year}
+            </motion.div>
+            <p className="text-gray-500 my-3" variants={childVariants}>
+              {x.description}
+            </p>
+          </motion.div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

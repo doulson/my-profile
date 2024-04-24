@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navbar, Hero, About, Contact, Projects } from "./components";
+import { Navbar, Hero, About, Contact, Previous, Projects } from "./components";
 
 const App = () => {
   const sectionClassName = `h-screen snap-center`;
@@ -17,14 +17,17 @@ const App = () => {
           <About />
         </div>
       </section>
-      <section id="Experiences" className={`${sectionClassName} mx-32 py-10`}>
-        Experiences
+      <section
+        id="Experiences"
+        className={`${sectionClassName} mx-5 sm:mx-32 pt-24 sm:py-10`}
+      >
+        <Previous />
       </section>
       <section
         id="Projects"
         className={`${sectionClassName} mx-32 py-10 relative overflow-hidden`}
       >
-        <div className="absolute w-full h-full overflow-y-auto no-scrollbar">
+        <div className="absolute w-full h-full overflow-y-auto overflow-x-visible no-scrollbar">
           <Projects />
         </div>
       </section>

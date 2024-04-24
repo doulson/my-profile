@@ -33,11 +33,7 @@ const About = () => {
       clipPath: "circle(2400px at top center)",
       opacity: 1,
       transition: {
-        type: "spring",
-        delay: 0.4,
         staggerChildren: 0.1, // 0.1 second delay between each child animation
-        stiffness: 4000,
-        damping: 1500,
       },
     },
   };
@@ -65,16 +61,20 @@ const About = () => {
             className="text-xl mt-5 sm:mt-0 sm:text-4xl lg:text-8xl flex flex-row sm:flex-col font-bold mb-5  duration-200"
             variants={childVariants}
           >
-            <span>About </span> <span className="ml-1 sm:ml-0">me</span>
+            <span>
+              About <span className="text-normal text-md"></span>{" "}
+            </span>{" "}
+            <span className="ml-1 sm:ml-0">me</span>
           </motion.h2>
+
           <div className="flex flex-col md:flex-row overflow-hidden z-10">
             <div className="w-full lg:w-2/3">
               <motion.div variants={childVariants} className="relative">
                 Results-driven
-                <strong className="text-xl text-cyan-300">
+                <motion.strong className="text-xl text-cyan-300">
                   {" "}
                   Full Stack Software Engineer{" "}
-                </strong>
+                </motion.strong>
                 with a proven track record in spearheading seamless integration
                 of web systems with AI technologies.
               </motion.div>

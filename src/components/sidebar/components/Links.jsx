@@ -44,6 +44,18 @@ const Links = ({ setOpen }) => {
           {link}
         </motion.a>
       ))}
+      <motion.a
+        className={aClassName}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={`https://drive.google.com/file/d/1j5i42eN5WgCwAlpvR1SBxbOJUkUEtMne/view?usp=sharing`}
+        variants={linkVariants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        Resume
+      </motion.a>
     </motion.div>
   );
 };

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-gray-900 text-gray-50 w-full selection:bg-blue-300 selection:text-blue-900;
+    @apply bg-gray-900 text-gray-50 w-full selection:bg-sky-200 selection:text-sky-700;
   }
   a {
     @apply no-underline text-inherit;
