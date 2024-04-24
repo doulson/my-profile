@@ -3,7 +3,7 @@ import { MouseParallax } from "react-just-parallax";
 
 const dots = () => {
   const calCenter = (xy) => {
-    return xy * 0.1;
+    return xy * 0.06;
   };
   const generateMatrix = (size) => {
     const matrix = [];
@@ -29,7 +29,7 @@ const dots = () => {
           {x.map((y, i) => (
             <div key={i}>
               <MouseParallax strength={calCenter(y)}>
-                <div className="dot blur-xl brightness-200 invert"></div>
+                <div className="dot blur-sm border-b-8 border-r-8 border-gray-500"></div>
               </MouseParallax>
             </div>
           ))}

@@ -54,26 +54,58 @@ const Hero = () => {
   };
   const sliderVariants = {
     initial: {
-      x: 0,
+      x: window.innerWidth,
     },
     animate: {
-      x: "-220%",
+      x: -window.innerWidth * 2,
       transition: {
         repeat: Infinity,
-        repeatType: "mirror",
-        duration: 20,
+        repeatType: "reverse",
+        duration: 10,
+      },
+    },
+  };
+  const sliderReverseVariants = {
+    initial: {
+      x: -window.innerWidth * 2,
+    },
+    animate: {
+      x: 0,
+      transition: {
+        repeat: Infinity,
+        repeatType: "reverse",
+        duration: 10,
       },
     },
   };
   return (
     <div className="hero bg-gradient-to-b bg-gray-900 to-blue-900 overflow-hidden flex flex-column relative">
       <motion.div
-        className="text-[50vh] font-bold absolute top-0 whitespace-nowrap text-slate-800/50  select-none"
+        className="text-[25vh] font-bold absolute bottom-0 whitespace-nowrap text-slate-800/50  select-none"
         variants={sliderVariants}
         initial="initial"
         animate="animate"
       >
-        "Built with love, crafted to last."
+        "Designed with passion, made for eternity." "Designed with passion, made
+        for eternity." "Designed with passion, made for eternity."
+      </motion.div>
+      <motion.div
+        className="text-[25vh] font-bold absolute top-40 whitespace-nowrap text-slate-800/50  select-none"
+        variants={sliderReverseVariants}
+        initial="initial"
+        animate="animate"
+      >
+        "Designed with passion, made for eternity." "Designed with passion, made
+        for eternity." "Designed with passion, made for eternity."
+      </motion.div>
+      <motion.div
+        className="text-[25vh] font-bold absolute bottom-[60%] whitespace-nowrap text-slate-800/50  select-none"
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+      >
+        "Designed with passion, made for eternity." "Designed with passion, made
+        for eternity." "Designed with passion, made for eternity."
       </motion.div>
       <div className="flex justify-between items-center z-10">
         <motion.div
@@ -112,10 +144,20 @@ const Hero = () => {
             <span className="text-cyan-500">"</span>
           </motion.h1>
           <motion.div variants={textVariants}>
-            <motion.button className={btnClassName} variants={textVariants}>
+            <motion.a
+              href="#Projects"
+              variants={textVariants}
+              className={btnClassName}
+            >
               See the Latest Works
-            </motion.button>
-            <motion.button className={btnClassName}>About Me</motion.button>
+            </motion.a>
+            <motion.a
+              href="#About"
+              variants={textVariants}
+              className={btnClassName}
+            >
+              About Me
+            </motion.a>
           </motion.div>
         </motion.div>
         <motion.img
