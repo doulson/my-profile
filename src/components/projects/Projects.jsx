@@ -3,12 +3,11 @@ import React, { useState } from "react";
 const Projects = () => {
   const [activeTab, setActiveTab] = useState(-1);
 
-  const questions = [
+  const projects = [
     {
       title: "Custlr",
       link: "https://custlr.com/",
-      content:
-        "Declare a new Alpine component and its data for a block of HTML.",
+      content: "E=",
       techs: [],
       img: "",
     },
@@ -33,7 +32,23 @@ const Projects = () => {
     setActiveTab(activeTab === index ? -1 : index);
   };
 
-  return <div></div>;
+  return (
+    <div className="grid grid-col-1 sm:grid-cols-4 gap-4">
+      <div className="">
+        <a
+          href="https://custlr.com/"
+          target="_blank
+        "
+        >
+          <img src="/Screenshot 2024-04-25 150631.png" alt="" />
+        </a>
+      </div>
+      <div>
+        <h2>Custlr</h2>
+        <small>E-commerce Website</small>
+      </div>
+    </div>
+  );
 };
 
 export default Projects;

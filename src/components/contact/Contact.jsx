@@ -146,14 +146,14 @@ const Contact = () => {
           </motion.div>
           <motion.div variants={childVariants}>
             <motion.a
-              href={`https://drive.google.com/file/d/1j5i42eN5WgCwAlpvR1SBxbOJUkUEtMne/view?usp=sharing`}
+              href={`https://drive.google.com/file/d/1gezoAk3z4sPYVEylQZg_OkHo83kD6Gu3/view?usp=sharing`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex gap-3"
               whileHover={{ scale: 1.1, x: window.innerWidth * 0.01 }}
               whileTap={{ scale: 0.95 }}
             >
-              My Resume
+              Resume
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

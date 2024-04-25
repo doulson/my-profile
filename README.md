@@ -49,6 +49,6 @@ Below are some of the projects I've worked on. Each project includes a brief des
 
 ## Contact Me
 
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/yourlinkedin) or visit my [GitHub](https://github.com/yourusername) for more insights into my work. For professional inquiries, please contact me directly through the website.
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/hwang-doulson-a938991a8/) or visit my [GitHub](https://github.com/doulson) for more insights into my work. For professional inquiries, please contact me directly through the website.
 
 Thank you for visiting my portfolio!
