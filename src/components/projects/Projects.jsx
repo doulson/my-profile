@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: "WeatherToday",
       sub: "Weather Application",
-      link: "https://ai-app-blond.vercel.app/wheatherapp",
+      link: "https://weather-app-delta-two-73.vercel.app",
       source: "https://github.com/doulson/WeatherApp",
       techs: ["Typescript", "NoSQL", "Reactjs", "Nextjs", "MongoDB"],
 
