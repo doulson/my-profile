@@ -52,7 +52,7 @@ const Contact = () => {
           Feel free to email me if you'd like to connect! Alternatively, you can
           reach out via{" "}
           <motion.a
-            href="http://"
+            href="https://www.linkedin.com/in/hwang-doulson-a938991a8/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-cyan-500 text-cyan-300  text-2xl text-bold transition duration-250"
@@ -61,12 +61,13 @@ const Contact = () => {
             LinkedIn
           </motion.a>{" "}
           or{" "}
-          <motion.span
+          <motion.a
+            href="https://web.whatsapp.com/send/?phone=+6586199926"
             className="text-cyan-300 text-2xl text-bold"
             variants={childVariants}
           >
             WhatsApp
-          </motion.span>{" "}
+          </motion.a>{" "}
           if you prefer.
         </motion.p>
         <motion.div

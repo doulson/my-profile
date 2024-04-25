@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { MouseParallax } from "react-just-parallax";
+import { MouseParallax, ScrollParallax } from "react-just-parallax";
 
 import "./hero.css";
 
@@ -173,7 +173,9 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <img src="/hero.png" alt="" />
+          <ScrollParallax shouldPause={true}>
+            <img src="/hero.png" alt="" />
+          </ScrollParallax>
         </motion.div>
       </div>
     </div>

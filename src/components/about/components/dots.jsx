@@ -28,7 +28,7 @@ const dots = () => {
         <div key={i} className="flex gap-5  md:gap-12 lg:gap-16 ml-24">
           {x.map((y, i) => (
             <div key={i}>
-              <MouseParallax strength={calCenter(y)}>
+              <MouseParallax strength={calCenter(y)} shouldPause={true}>
                 <div className="dot blur-xl brightness-200 invert"></div>
               </MouseParallax>
             </div>

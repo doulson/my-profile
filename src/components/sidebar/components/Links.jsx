@@ -56,6 +56,18 @@ const Links = ({ setOpen }) => {
       >
         Resume
       </motion.a>
+      <motion.a
+        className={aClassName}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={`https://github.com/doulson`}
+        variants={linkVariants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        Github
+      </motion.a>
     </motion.div>
   );
 };

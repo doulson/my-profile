@@ -25,7 +25,7 @@ const App = () => {
       </section>
       <section
         id="Projects"
-        className={`${sectionClassName} mx-32 py-10 relative overflow-hidden`}
+        className={`${sectionClassName} mx-5 sm:mx-32 pt-24 sm:py-10  relative overflow-hidden`}
       >
         <div className="absolute w-full h-full overflow-y-auto overflow-x-visible no-scrollbar">
           <Projects />

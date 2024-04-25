@@ -60,9 +60,8 @@ const Previous = () => {
       {exps.map((x) => (
         <motion.div
           key={x.company}
-          className="flex gap-10 p-4 rounded-xl hover:bg-white/5 hover:border-2 hover:p-5"
+          className="flex gap-10 p-4 rounded-lg hover:bg-white/5 hover:border border-white/5"
           variants={childVariants}
-          whileHover={{ scale: 1.04 }}
         >
           <motion.div
             className="hidden sm:block sm:w-1/3 text-gray-400"
