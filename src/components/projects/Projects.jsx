@@ -21,6 +21,15 @@ const Projects = () => {
       status: true,
     },
     {
+      title: "Doulson's Resume",
+      sub: "Resume application",
+      link: "https://my-profile-woad-rho.vercel.app/",
+      source: "https://github.com/doulson/APromtp",
+      techs: ["Javascipt", "Reactjs", "Framer Motion"],
+      img: "/personal_surface.png",
+      status: true,
+    },
+    {
       title: "WeatherToday",
       sub: "Weather Application",
       link: "https://weather-app-delta-two-73.vercel.app",
