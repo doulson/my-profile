@@ -14,7 +14,7 @@ const Projects = () => {
     {
       title: "Nextjs Auth",
       sub: "An Application only for authentication including 3rd party providers, middleware, email vertification, reset password email two-factor authentication, multi role authentication and permissions",
-      link: null,
+      link: "https://nextjs-auth-doulson-psi-seven.vercel.app/",
       source: "https://github.com/doulson/nextjs-auth",
       techs: [
         "Typescript",
@@ -24,8 +24,8 @@ const Projects = () => {
         "radix-ui",
         "shadcn/ui",
       ],
-      img: null,
-      status: false,
+      img: "/next-auth.png",
+      status: true,
     },
     {
       title: "APrompt",
