@@ -157,9 +157,11 @@ const Projects = () => {
                       filter="url(#noiseFilter)"
                     />
                   </svg>
-                  <p className="font-2xl font-semibold absolute top-50 left-50">
-                    Coming Soon
-                  </p>
+                  {!project.status && (
+                    <p className="font-2xl font-semibold absolute top-50 left-50">
+                      Coming Soon
+                    </p>
+                  )}
                 </div>
               )}
             </div>
@@ -265,21 +267,19 @@ const Projects = () => {
                 </div>
               )}
 
-              {project.status && (
-                <div>
-                  <p className="text-sm text-gray-400">Technologies</p>
-                  <div className="select-none">
-                    {project.techs.map((t) => (
-                      <span
-                        key={t}
-                        className="border-2 rounded-full p-1 px-3 hover:bg-white hover:text-black ease-in duration-150 mx-1 text-center whitespace-nowrap align-baseline inline-block my-2"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+              <div>
+                <p className="text-sm text-gray-400">Technologies</p>
+                <div className="select-none">
+                  {project.techs.map((t) => (
+                    <span
+                      key={t}
+                      className="border-2 rounded-full p-1 px-3 hover:bg-white hover:text-black ease-in duration-150 mx-1 text-center whitespace-nowrap align-baseline inline-block my-2"
+                    >
+                      {t}
+                    </span>
+                  ))}
                 </div>
-              )}
+              </div>
             </div>
           </div>
         </div>
