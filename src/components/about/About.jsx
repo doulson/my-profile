@@ -70,14 +70,14 @@ const About = () => {
           <div className="flex flex-col md:flex-row overflow-hidden z-10">
             <div className="w-full lg:w-2/3">
               <motion.div variants={childVariants} className="relative">
-                Results-driven
-                <motion.strong className="text-xl text-cyan-300">
-                  {" "}
-                  Full Stack Software Engineer{" "}
-                </motion.strong>
-                with a proven track record in spearheading seamless integration
-                of web systems with AI technologies.
+                I've tackled projects like an Inventory Management System for
+                Automation and a Financial Management System for Construction
+                Machinery.
               </motion.div>
+              <motion.p variants={childVariants} className="mt-10">
+                I've even dabbled in integrating 3D Virtual Fitting Rooms into
+                Shopify, making online shopping more immersive.
+              </motion.p>
               <motion.p variants={childVariants} className="mt-10">
                 I'm <strong className="text-xl text-cyan-300">Open</strong> to
                 job opportunities that give me chance to contribute, learn, and

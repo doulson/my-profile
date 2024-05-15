@@ -118,6 +118,55 @@ const Projects = () => {
       img: "/tryiton.png",
       status: true,
     },
+    {
+      title: "Financial Management System",
+      sub: "Company project. Helps organizations manage their financial operations and processes with integrate to 3rd party API",
+      link: null,
+      source: null,
+      techs: ["Vuejs", "CSS", "Typescript", "Springboot", "AWS Cloud Services"],
+      img: null,
+      status: true,
+    },
+    {
+      title: "Document Management System",
+      sub: "Company project. Generate, translate, and extract information from electronic documents and images of paper-based information captured through scanning.",
+      link: null,
+      source: null,
+      techs: ["Vuejs", "CSS", "Typescript", "Expressjs", "AWS Cloud Services"],
+      img: null,
+      status: true,
+    },
+    {
+      title: "Inventory Management System in Automation Industry",
+      sub: "Company project. streamline and manage various aspects of human resource activities, reporting and analytics",
+      link: null,
+      source: null,
+      techs: [
+        "Reactjs",
+        "CSS",
+        "Typescript",
+        "Expressjs",
+        "AWS Cloud Services",
+      ],
+      img: null,
+      status: true,
+    },
+    {
+      title:
+        "Talent Pool & Human Resource Management System in Financial Industry",
+      sub: "Company project. streamline and manage various aspects of human resource activities, reporting and analytics",
+      link: null,
+      source: null,
+      techs: [
+        "Reactjs",
+        "CSS",
+        "Typescript",
+        "Expressjs",
+        "AWS Cloud Services",
+      ],
+      img: null,
+      status: true,
+    },
   ];
 
   return (
@@ -172,7 +221,7 @@ const Projects = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-400">Website URL</p>
-                {project.status ? (
+                {project.status && project.link ? (
                   <motion.a
                     href={project.link}
                     target="_blank"
