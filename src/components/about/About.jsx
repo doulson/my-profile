@@ -17,7 +17,7 @@ const About = () => {
     "Spring Boot",
     "Express",
     "Cypress",
-    "MYSQL/MSSQL",
+    "MYSQL/MSSQL/PostgreSQL",
     "MongoDB",
     "Git",
     "AWS / Alibaba Cloud Services",
